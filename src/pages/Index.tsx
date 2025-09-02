@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Navigation } from "@/components/portfolio/Navigation";
+import { Hero } from "@/components/portfolio/Hero";
+import { Skills } from "@/components/portfolio/Skills";
+import { Projects } from "@/components/portfolio/Projects";
+import { Contact } from "@/components/portfolio/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <ThemeToggle />
+      <Navigation />
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 };
